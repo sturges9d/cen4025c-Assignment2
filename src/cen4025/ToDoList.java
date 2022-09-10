@@ -8,7 +8,7 @@ import java.util.Scanner;
  * To-Do List class for Assignment 2, CEN 4025C-15911, Software Development II, Valencia College.
  * 
  * @author	Stephen Sturges Jr
- * @version	09/07/2022
+ * @version	09/10/2022
  */
 public class ToDoList {
 	
@@ -30,9 +30,9 @@ public class ToDoList {
 	}
 	
 	/**
-	 * Adds a task to the To-Do list.
+	 * Adds a task to the To-Do list. (Overloaded method.)
 	 * 
-	 * @param task
+	 * @param task	A String entered by the user describing the item they wish to put on the To-Do list.
 	 */
 	public void addTask(String task) {
 		toDoList.add(task);
@@ -71,9 +71,9 @@ public class ToDoList {
 	}
 	
 	/**
-	 * Removes a task from the To-Do list.
+	 * Removes a task from the To-Do list. (Overloaded method.)
 	 * 
-	 * @param index	
+	 * @param index	An integer value pertaining to the location of the item the user wants to remove from the To-Do list.
 	 */
 	public void removeTask(int index) {
 		if (toDoList.size() == 0) {
@@ -86,19 +86,19 @@ public class ToDoList {
 	/**
 	 * Returns the size of the ArrayList containing To-Do list items.
 	 * 
-	 * @return
+	 * @return	An integer pertaining to how many items are in the To-Do list.
 	 */
 	public int toDoListSize() {
 		return toDoList.size();
 	}
 	
 	/**
+	 * Used to get an integer value from the user and validate it is within bounds. Handles incorrect inputs such as strings, doubles, etc.
 	 * 
-	 * 
-	 * @param inputPrompt
-	 * @param lowerBound
-	 * @param upperBound
-	 * @return
+	 * @param inputPrompt	A string prompting the user for input.
+	 * @param lowerBound	An integer representing the lowest acceptable value the user can input.
+	 * @param upperBound	An integer representing the highest acceptable value the user can input.
+	 * @return				Validated integer input from the user.
 	 */
 	public static int userInputInt(String inputPrompt, int lowerBound, int upperBound) {
 		int userInput = 0;	// Return variable.
@@ -123,10 +123,10 @@ public class ToDoList {
 	} // End of userInputInt method.
 	
 	/**
+	 * Prompts the user for String input and returns the input String.
 	 * 
-	 * 
-	 * @param inputPrompt
-	 * @return
+	 * @param inputPrompt	A string prompting the user for input.
+	 * @return				A string containing the user's input.
 	 */
 	public static String userInputString(String inputPrompt) {
 		System.out.print(inputPrompt);
@@ -134,4 +134,4 @@ public class ToDoList {
 		return userInput;
 	}
 	
-}
+} // End of ToDoList class.

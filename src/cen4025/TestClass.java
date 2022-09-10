@@ -5,9 +5,10 @@ import java.util.Scanner;
 
 /**
  * For Assignment 2, CEN 4025C-15911, Software Development II, Valencia College.
+ * A To-Do list program that allows the user to add, display, and remove tasks.
  * 
  * @author	Stephen Sturges Jr
- * @version	09/07/2022
+ * @version	09/10/2022
  */
 public class TestClass {
 	
@@ -15,14 +16,15 @@ public class TestClass {
 	static Scanner input = new Scanner(System.in);
 	
 	/**
+	 * This is the main method for the TestClass.
 	 * 
-	 * @param args
+	 * @param args	This class takes no arguments.
 	 */
 	public static void main(String[] args) {
 		ToDoList list = new ToDoList();
 		int userInput;
 		
-		// TODO Remove the lines below before submitting.
+		// The following lines are added for quick testing of the program.
 		list.addTask("Task one.");
 		list.addTask("Task two.");
 		list.addTask("Task three.");
@@ -49,7 +51,7 @@ public class TestClass {
 	} // End of main method.
 	
 	/**
-	 * 
+	 * Outputs a menu to the console.
 	 */
 	public static void displayMenu() {
 		marquee("Main To-Do List Menu", '=', 3);
@@ -60,10 +62,11 @@ public class TestClass {
 	} // End of displayMenu method.
 
 	/**
+	 * Displays a message surrounded by a border consisting of the given character.
 	 * 
-	 * @param message
-	 * @param symbol
-	 * @param horizontalPadding
+	 * @param message			A String from the user to be displayed inside the border.
+	 * @param symbol			A char used to create the border.
+	 * @param horizontalPadding	An integer representing the space between the 
 	 */
 	public static void marquee(String message, char symbol, int horizontalPadding) {
 		int horizontalPaddingBorder = (horizontalPadding * 2) + 2;
@@ -94,11 +97,12 @@ public class TestClass {
 	} // End of marquee method.
 	
 	/**
+	 * Used to get an integer value from the user and validate it is within bounds. Handles incorrect inputs such as strings, doubles, etc.
 	 * 
-	 * @param inputPrompt
-	 * @param lowerBound
-	 * @param upperBound
-	 * @return
+	 * @param inputPrompt	A string prompting the user for input.
+	 * @param lowerBound	An integer representing the lowest acceptable value the user can input.
+	 * @param upperBound	An integer representing the highest acceptable value the user can input.
+	 * @return				Validated integer input from the user.
 	 */
 	public static int userInputInt(String inputPrompt, int lowerBound, int upperBound) {
 		int userInput = 0;	// Return variable.
