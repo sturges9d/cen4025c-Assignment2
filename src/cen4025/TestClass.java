@@ -25,10 +25,10 @@ public class TestClass {
 		int userInput;
 		
 		// The following lines are added for quick testing of the program.
-		list.addTask("Task one.");
-		list.addTask("Task two.");
-		list.addTask("Task three.");
-		list.addTask("Task four.");
+		list.addTask("Example: Task one.");
+		list.addTask("Example: Task two.");
+		list.addTask("Example: Task three.");
+		list.addTask("Example: Task four.");
 		
 		do {
 			displayMenu();
